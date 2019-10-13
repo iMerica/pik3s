@@ -1,0 +1,8 @@
+podnet: 10.244.0.0/16
+
+k3s_version: v0.9.1
+ansible_user: pi
+systemd_dir: /etc/systemd/system
+master_ip: "{{ hostvars[groups['master'][0]]['ansible_host'] | default(groups['master'][0]) }}"
+
+flannel_version: "master"
